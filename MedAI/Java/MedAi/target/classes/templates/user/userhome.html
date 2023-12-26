@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{user/userbase::layout(~{::section})}">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+	<section class="content" th:objct="user">
+		<style>
+			.banner {
+				height: 92vh;
+				width: 100%;
+				background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(/images/aihome.jpg);
+				background-size: cover;
+				color: white;
+				align-items: center;
+				justify-content: center;
+
+			}
+		</style>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<div class="container">
+			<div class="intro">
+				<div class=" row" style="height: 30rem;margin-top: 7rem;">
+
+					<div class="col-md-6 ">
+						<!-- text -->
+						<h3>Welcome to
+							<span class="multiple-text"></span>
+						</h3> Your Gateway to Predictive Health. Harnessing the power of cutting-edge artificial
+						intelligence, our medical website stands at the forefront of innovation, dedicated to
+						transforming healthcare. Dive into a realm where technology meets compassion, as we proudly
+						introduce our AI models designed to predict breast cancer and brain tumors with unparalleled
+						accuracy. At MedAI, we believe in the fusion of precision and care, empowering individuals with
+						early detection insights. Welcome to the future of predictive health—welcome to MedAI.
+						<hr>
+						<a th:href="@{/signin}" type="button" class="btn btn-info">Let's Start your journey with
+							us..</a>
+					</div>
+					<div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+						<!-- image -->
+						<img th:src="@{/images/aihome.jpg}" style="height: 22rem;width: 32rem;border-radius: 10px;">
+					</div>
+				</div>
+				<div class="row mt-4" style="height: 30rem;margin-top: 7rem;">
+					<div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+						<!-- image -->
+						<img th:src="@{/images/breastai.jpg}" style="height: 20rem;width: 25rem;border-radius: 10px;">
+					</div>
+					<div class="col-md-6 mt-4">
+						<!-- text -->
+						<h3>
+							<span class="cancer-text"></span>
+						</h3> Experience the future of healthcare with our state-of-the-art breast cancer prediction
+						technology. Leveraging advanced algorithms, our platform ensures accurate, early detection,
+						transforming the landscape of proactive health. Empower yourself with insights that redefine
+						well-being, offering a revolutionary approach to breast cancer prediction for a healthier
+						tomorrow.
+						<hr>
+						<a th:href="@{/user/breast-cancer-prediction}" type="button" class="btn btn-info">Predict</a>
+					</div>
+
+				</div>
+				<div class="row mt-4" style="height: 30rem;margin-top: 7rem;">
+					<div class="col-md-6 mt-4">
+						<!-- text -->
+						<h3>
+							<span class="brain-text"></span>
+						</h3> Embark on a journey of foresight with our groundbreaking brain tumor prediction
+						technology. Fusing cutting-edge AI algorithms, we redefine proactive health by ensuring early
+						detection precision. Empower yourself with revolutionary insights that pave the way for a future
+						where brain tumor prediction transforms the landscape of well-being.
+						<hr>
+						<a th:href="@{/user/brain-tumor-prediction}" type="button" class="btn btn-info">Predict</a>
+					</div>
+					<div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+						<!-- image -->
+						<img th:src="@{/images/images.jpg}" style="height: 20rem;width: 30rem;border-radius: 10px;">
+					</div>
+				</div>
+
+				<div class="row mt-4" style="height: 30rem;margin-top: 7rem;">
+					<div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+						<!-- image -->
+						<img th:src="@{/images/diabetes.jpg}" style="height: 20rem;width: 25rem;border-radius: 10px;">
+					</div>
+					<div class="col-md-6 mt-4">
+						<!-- text -->
+						<h3>
+							<span class="diabetes-text"></span>
+						</h3> Experience the future of healthcare with our state-of-the-art breast cancer prediction
+						technology. Leveraging advanced algorithms, our platform ensures accurate, early detection,
+						transforming the landscape of proactive health. Empower yourself with insights that redefine
+						well-being, offering a revolutionary approach to breast cancer prediction for a healthier
+						tomorrow.
+						<hr>
+						<a th:href="@{/user/diabetes-prediction}" type="button" class="btn btn-info">Predict</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+		<!-- Remove the container if you want to extend the Footer to full width. -->
+		<!-- Footer -->
+		<footer class="text-center text-lg-start text-white" style="background-color: #3e4551">
+			<!-- Grid container -->
+			<div class="container p-4 pb-0">
+				<!-- Section: Links -->
+				<section class="">
+					<!--Grid row-->
+					<div class="row">
+						<!--Grid column-->
+						<div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase">FOOTER CONTENT</h5>
+
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Molestiae modi cum ipsam ad, illo possimus laborum ut
+								reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
+								Reiciendis assumenda iusto sapiente inventore animi?
+							</p>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+						<div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase">Links</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">Link 1</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 2</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 3</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 4</a>
+								</li>
+							</ul>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+						<div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase">Links</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">Link 1</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 2</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 3</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 4</a>
+								</li>
+							</ul>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+						<div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase">Links</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">Link 1</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 2</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 3</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 4</a>
+								</li>
+							</ul>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+						<div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase">Links</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">Link 1</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 2</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 3</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Link 4</a>
+								</li>
+							</ul>
+						</div>
+						<!--Grid column-->
+					</div>
+					<!--Grid row-->
+				</section>
+				<!-- Section: Links -->
+
+				<hr class="mb-4" />
+
+				<!-- Section: CTA -->
+				<section class="">
+					<p class="d-flex justify-content-center align-items-center">
+						<span class="me-3">Register for free</span>
+						<button type="button" class="btn btn-outline-light btn-rounded">
+							Sign up!
+						</button>
+					</p>
+				</section>
+				<!-- Section: CTA -->
+
+				<hr class="mb-4" />
+
+				<!-- Section: Social media -->
+				<section class="mb-4 text-center">
+					<!-- Facebook -->
+					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+							class="fab fa-facebook-f"></i></a>
+
+					<!-- Twitter -->
+					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+							class="fab fa-twitter"></i></a>
+
+					<!-- Google -->
+					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+							class="fab fa-google"></i></a>
+
+					<!-- Instagram -->
+					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+							class="fab fa-instagram"></i></a>
+
+					<!-- Linkedin -->
+					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+							class="fab fa-linkedin-in"></i></a>
+
+					<!-- Github -->
+					<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+							class="fab fa-github"></i></a>
+				</section>
+				<!-- Section: Social media -->
+			</div>
+			<!-- Grid container -->
+
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+				© 2020 Copyright:
+				<a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+			</div>
+			<!-- Copyright -->
+		</footer>
+		<!-- End of .container -->
+	</section>
+
+
+</body>
+
+</html>

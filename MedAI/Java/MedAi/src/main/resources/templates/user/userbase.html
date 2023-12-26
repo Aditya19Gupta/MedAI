@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+
+<head>
+	<!-- Required meta tags -->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+	<title th:text="${title}"></title>
+	<link rel="icon" href="/img/title_logo.png" type="image/png">
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+	<!--navbar-->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
+		<a class="navbar-brand font-weight-bold ml-5" id="logo-text" href="/">MedAI</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto mr-5 font-weight-bold text-white">
+				<li class="nav-item active mr-5">
+					<a class="nav-link" th:href="@{/user/home}">Home <span class="sr-only">(current)</span></a>
+				</li>
+
+				<li class="nav-item dropdown mr-5 active">
+					<a th:href="@{/user/account}" class="nav-link" th:text="${user.name}" href="#" aria-haspopup="true" aria-expanded="false">
+
+					</a>
+
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link " th:href="@{/logout}">Logout</a>
+				</li>
+			</ul>
+
+		</div>
+	</nav>
+
+	<!--end navbar-->
+	<!--start-sidebar-->
+	<div class="sidebar">
+		<div class="pt-5 mt-4"></div>
+		<a class="ml-5 mr-5" th:href="@{/user/dashboard}">Profile</a>
+		<a th:href="@{/user/check-health}">Check Health</a>
+		<a class="ml-5 mr-5" th:href="@{/user/breast-cancer-prediction}">Check Breast Cancer</a>
+		<a class="ml-5 mr-5" th:href="@{/user/diabetes-prediction}">Check  Diabetes</a>
+		<a class="ml-5 mr-5" th:href="@{/user/brain-tumor-prediction}">Check Brain Tumor </a>
+		<a class="ml-5 mr-5" th:href="@{/user/chat-doctor}">Talk to doctor</a>
+		<a class="ml-5 mr-5" href="/logout"> Others</a>
+		<hr>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<!--end-sidebar-->
+	<div th:replace="${content}">
+		Hello, world!
+
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+	<script th:src="@{/js/script.js}"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>

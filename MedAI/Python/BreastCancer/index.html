@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prediction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function predict() {
+            var formData = $('#predictionForm').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '/predict',
+                data: formData,
+                success: function(response) {
+                    $('#predictionResult').html('Prediction: ' + response.prediction);
+                },
+                error: function(error) {
+                    console.log('Error:', error);
+                }
+            });
+            return false; // Prevent default form submission
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Breast Cancer Features</h2>
+    <form id="predictionForm" onsubmit="return predict()">
+        <label for="clump_thickness">Clump Thickness:</label>
+        <input type="number" id="clump_thickness" name="clump_thickness" required><br><br>
+
+	<label for="uniform_cell_size">uniform_cell_size:</label>
+        <input type="number" id="uniform_cell_size" name="uniform_cell_size" required><br><br>
+
+	<label for="uniform_cell_shape">uniform_cell_shape:</label>
+        <input type="number" id="uniform_cell_shape" name="uniform_cell_shape" required><br><br>
+
+	<label for="marginal_adhesion">marginal_adhesion:</label>
+        <input type="number" id="marginal_adhesion" name="marginal_adhesion" required><br><br>
+
+	<label for="single_epithelial_size">single_epithelial_size:</label>
+        <input type="number" id="single_epithelial_size" name="single_epithelial_size" required><br><br>
+
+	<label for="bare_nuclei">bare_nuclei:</label>
+        <input type="number" id="bare_nuclei" name="bare_nuclei" required><br><br>
+
+	<label for="bland_chromatin">bland_chromatin:</label>
+        <input type="number" id="bland_chromatin" name="bland_chromatin" required><br><br>
+
+	<label for="normal_nucleoli">normal_nucleoli:</label>
+        <input type="number" id="normal_nucleoli" name="normal_nucleoli" required><br><br>
+
+	<label for="mitoses">mitoses:</label>
+        <input type="number" id="mitoses" name="mitoses" required><br><br>
+
+        
+        
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    <div id="predictionResult"></div>
+</body>
+</html>

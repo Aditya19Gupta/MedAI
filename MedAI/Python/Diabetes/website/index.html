@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Detection</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function predict() {
+            var formData = $('#predictionForm').serialize();
+            $.ajax({
+                type: 'POST',
+                url: '/predict',
+                data: formData,
+                success: function(response) {
+                    $('#predictionResult').html('Prediction: ' + response.prediction);
+                },
+                error: function(error) {
+                    console.log('Error:', error);
+                }
+            });
+            return false; // Prevent default form submission
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Value</h2>
+    <form id="predictionForm" onsubmit="return predict()">
+        
+
+	<label for="Glucose">Glucose:</label>
+            <input type="number" id="Glucose" name="Glucose" required><br><br>
+
+            <label for="Insulin">Insulin:</label>
+            <input type="Insulin" id="Insulin" name="uniform_cell_size" required><br><br>
+
+            <label for="BMI">BMI:</label>
+            <input type="number" id="BMI" name="BMI" required><br><br>
+
+             <label for="Age">Age:</label>
+            <input type="number" id="Age" name="Age" required><br><br>
+
+    
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    <div id="predictionResult"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prediction</title>
+</head>
+<body>
+    <h2>Enter Breast Cancer Features</h2>
+    <form action="/predict" method="post">
+        <label for="clump_thickness">Clump Thickness:</label>
+        <input type="number" id="clump_thickness" name="clump_thickness" required><br><br>
+        
+        <label for="uniform_cell_size">Uniform Cell Size:</label>
+        <input type="number" id="uniform_cell_size" name="uniform_cell_size" required><br><br>
+        
+        <!-- Add input fields for other features (similar to the above) -->
+        <!-- For uniformity, add input fields for all 9 features -->
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+    <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
